@@ -1,0 +1,19 @@
+<view class="weui-loadmore">
+  <view class='nodata-wrap' wx:if="{{noData}}">
+    <image class='nodata-image' src='../../assets/empty.png'></image>
+    <view class="nodata-text">数据为空</view>
+  </view>
+  
+  <view wx:else class='tip-wrap'>
+    <!-- 个人感觉比较鸡肋 因为在实际场景下应该不会做成首次请求不填满一屏的情况 -->
+    <!-- <view wx:if="{{!ended && !loading}}" class="weui-loadmore__tips">
+      上拉加载更多
+    </view> -->
+    <van-loading type="spinner" size="40rpx;" wx:if="{{loading}}" color="#cccccc" />
+    
+    <view wx:if="{{loading}}" class="weui-loadmore__tips">加载中</view>
+    <view wx:if="{{!loading && ended}}" class="weui-loadmore__tips">
+      没有更多了
+    </view>
+  </view>
+</view>

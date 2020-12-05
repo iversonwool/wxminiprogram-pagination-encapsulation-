@@ -1,0 +1,12 @@
+<view>
+  <view wx:for="{{list}}" wx:for-item="item" wx:key="index">
+    <selectable item="{{item}}" bind:onItemClick="onItemClick"></selectable>
+  </view>
+
+  <load-more 
+    no-data="{{list.length === 0}}" 
+    loading="{{loading}}" 
+    ended="{{ended}}"
+  ></load-more>
+  <!-- <loading wx:if="{{loading}}" custom-class="loading"></loading> -->
+</view>

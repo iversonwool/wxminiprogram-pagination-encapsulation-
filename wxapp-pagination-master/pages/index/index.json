@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "pagination": "/components/pagination/index",
+    "user-item": "/components/user-item/index"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "用户列表"
+}
